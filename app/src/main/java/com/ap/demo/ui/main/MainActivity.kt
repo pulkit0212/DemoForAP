@@ -2,6 +2,7 @@ package com.ap.demo.ui.main
 
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
 import com.ap.demo.core.BaseActivity
 import com.ap.demo.databinding.ActivityMainBinding
 import com.ap.demo.ui.adapter.ImagePagingAdapter
@@ -23,6 +24,7 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
         binding.lifecycleOwner = this
 
         adapter = ImagePagingAdapter()
+        binding.rvCart.layoutManager = GridLayoutManager(this, 3)
         binding.rvCart.adapter = adapter
         callGetImagesAPI()
     }

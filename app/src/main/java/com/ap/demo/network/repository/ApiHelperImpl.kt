@@ -15,7 +15,7 @@ class ApiHelperImpl @Inject constructor(val apiService: ApiService):BaseDataSour
     fun getImagesApi(): Flow<PagingData<ImageModelResponse.ImageModelResponseItem>> {
         return Pager(
             config = PagingConfig(
-                pageSize = 10,
+                pageSize = 100,
                 enablePlaceholders = false,
                 prefetchDistance = 1
             ),

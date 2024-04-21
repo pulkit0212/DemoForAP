@@ -6,7 +6,7 @@
     <data>
         <variable
             name="imageUrl"
-            type="String" />
+            type="android.graphics.Bitmap" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,28 +14,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <View
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/grey"
-            android:layout_marginTop="@dimen/_8sdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_200sdp"
+            android:layout_height="@dimen/_100sdp"
             android:layout_margin="@dimen/_12sdp"
-            android:scaleType="centerCrop"
             android:imageUrl="@{imageUrl}"
+            android:scaleType="centerCrop"
             android:src="@drawable/placeholder"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view" />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

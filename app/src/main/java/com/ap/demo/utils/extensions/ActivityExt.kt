@@ -3,9 +3,13 @@ package com.ap.demo.utils.extensions
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.os.Environment
 import android.os.Parcelable
 import android.widget.Toast
+import okhttp3.internal.cacheGet
 import java.io.*
 
 
@@ -57,4 +61,3 @@ fun Intent.putExtras(vararg params: Pair<String, Any>): Intent {
     }
     return this
 }
-
